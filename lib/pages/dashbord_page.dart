@@ -59,7 +59,42 @@ class _DashbordPageState extends State<DashbordPage> {
           // right drawer expanded
           Expanded(
             flex: 4,
-            child: Container(color: Colors.grey, child: Column()),
+            child: Container(
+              color: Colors.grey[300],
+              child: Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.all(15),
+                    height: 100,
+
+                    child: Card(color: Colors.white, child: Row(children: [
+                      
+                    ]
+                  )),
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 15),
+                    height: 250,
+                    //color: Colors.grey[300],
+                    child: GridView.builder(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 4,
+                        //mainAxisSpacing: 15,
+                        crossAxisSpacing: 12,
+                      ),
+                      itemBuilder: (context, index) {
+                        return Card(color: Colors.white);
+                      },
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                    height: 500,
+                    child: Card(color: Colors.white, child: Row()),
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
       ),
