@@ -1,3 +1,5 @@
+import 'package:doctors_platform/custom%20widget/card_for_gird.dart';
+import 'package:doctors_platform/custom%20widget/hospitol_service_banare.dart';
 import 'package:doctors_platform/custom%20widget/sps.dart';
 import 'package:doctors_platform/custom%20widget/text_button_drawer_side.dart';
 import 'package:flutter/material.dart';
@@ -76,21 +78,30 @@ class _DashbordPageState extends State<DashbordPage> {
                     margin: EdgeInsets.symmetric(horizontal: 15),
                     height: 250,
                     //color: Colors.grey[300],
-                    child: GridView.builder(
+                    child: GridView(
+                      physics: NeverScrollableScrollPhysics(),
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        mainAxisExtent: 250,
                         crossAxisCount: 4,
                         //mainAxisSpacing: 15,
                         crossAxisSpacing: 12,
                       ),
-                      itemBuilder: (context, index) {
-                        return Card(color: Colors.white);
-                      },
+                      children: [
+                        CardForGird(),
+                        CardForGird(),
+                        CardForGird(),
+                        CardForGird(),
+                      ],
                     ),
                   ),
                   Container(
                     margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                     height: 500,
-                    child: Card(color: Colors.white, child: Row()),
+                    width: double.infinity,
+                    child: Card(
+                      color: Colors.white,
+                      child: HospitolServiceBanare(),
+                    ),
                   ),
                 ],
               ),
