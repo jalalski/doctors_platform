@@ -1,5 +1,5 @@
-import 'package:doctors_platform/pages/left_side.dart';
-import 'package:doctors_platform/pages/right_side.dart';
+import 'package:doctors_platform/pages/dashboard%20page/left_side.dart';
+import 'package:doctors_platform/pages/dashboard%20page/right_side.dart';
 import 'package:flutter/material.dart';
 
 class DashbordPage extends StatefulWidget {

@@ -9,7 +9,7 @@ class LeftSide extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(child: Image.asset(""), height: 200),
+        SizedBox(height: 200, child: Image.asset("")),
         Divider(color: Colors.grey[300], height: 5),
         //text side
         Column(

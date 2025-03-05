@@ -1,4 +1,4 @@
-import 'package:doctors_platform/pages/dashbord_page.dart';
+import 'package:doctors_platform/pages/dashboard%20page/dashbord_page.dart';
 import 'package:flutter/material.dart';
 
 class HollowPage extends StatefulWidget {

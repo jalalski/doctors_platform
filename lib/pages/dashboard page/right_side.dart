@@ -15,10 +15,35 @@ class RightSide extends StatelessWidget {
             margin: EdgeInsets.all(15),
             height: 100,
 
-            child: Card(color: Colors.white, child: Row(children: [
-                      
-                    ]
-                  )),
+            child: Card(
+              color: Colors.white,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Flexible(
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: SearchBar(
+                        hintText: "Search test",
+                        backgroundColor: WidgetStatePropertyAll(
+                          Colors.grey[200],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.notifications),
+                      ),
+                      IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
+                      IconButton(onPressed: () {}, icon: CircleAvatar()),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 15),
